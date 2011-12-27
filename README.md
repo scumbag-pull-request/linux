@@ -1,10 +1,11 @@
-## Linux kernel release 3.x <http://kernel.org/>
+# Linux kernel release 3.x
+## http://kernel.org/
 
 These are the release notes for Linux version 3.  Read them carefully,
 as they tell you what this is all about, explain how to install the
 kernel, and what to do if something goes wrong.
 
-## WHAT IS LINUX?
+## What is Linux?
 
 Linux is a clone of the operating system Unix, written from scratch by
 Linus Torvalds with assistance from a loosely-knit team of hackers across
@@ -18,7 +19,7 @@ and multistack networking including IPv4 and IPv6.
 It is distributed under the GNU General Public License - see the
 accompanying COPYING file for more details.
 
-## ON WHAT HARDWARE DOES IT RUN?
+## On what hardware does it run?
 
 Although originally developed first for 32-bit x86-based PCs (386 or higher),
 today Linux also runs on (at least) the Compaq Alpha AXP, Sun SPARC and
@@ -34,7 +35,7 @@ functionality is then obviously somewhat limited.
 Linux has also been ported to itself. You can now run the kernel as a
 userspace application - this is called UserMode Linux (UML).
 
-## DOCUMENTATION:
+## Documentation:
 
 - There is a lot of documentation available both in electronic form on
 the Internet and in books, both Linux-specific and pertaining to
@@ -131,7 +132,7 @@ make mrproper
 
 You should now have the sources correctly installed.
 
-## SOFTWARE REQUIREMENTS
+## Software Requirements
 
 Compiling and running the 3.x kernels requires up-to-date
 versions of various software packages.  Consult
@@ -218,10 +219,10 @@ in `Documentation/kbuild/kconfig.txt`.
 
 ### NOTES on "make config":
 
-- having unnecessary drivers will make the kernel bigger, and can
+- Having unnecessary drivers will make the kernel bigger, and can
 under some circumstances lead to problems: probing for a
 nonexistent controller card may confuse your other controllers
-- compiling the kernel with "Processor type" set higher than 386
+- Compiling the kernel with "Processor type" set higher than 386
 will result in a kernel that does NOT work on a 386.  The
 kernel will detect this on bootup, and give up.
 - A kernel with math-emulation compiled in will still use the
@@ -229,7 +230,7 @@ coprocessor if one is present: the math emulation will just
 never get used in that case.  The kernel will be slightly larger,
 but will work on different machines regardless of whether they
 have a math coprocessor or not.
-- the "kernel hacking" configuration details usually result in a
+- The "kernel hacking" configuration details usually result in a
 bigger or slower kernel (or both), and can even make the kernel
 less stable by configuring some routines to actively try to
 break bad code to find kernel problems (kmalloc()).  Thus you
@@ -309,7 +310,7 @@ recompile the kernel to change these parameters.
 
 Reboot with the new kernel and enjoy. :-)
 
-### IF SOMETHING GOES WRONG:
+### If something goes wrong:
 
 - If you have problems that seem to be due to kernel bugs, please check
 the file MAINTAINERS to see if there is a particular person associated
